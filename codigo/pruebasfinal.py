@@ -119,7 +119,7 @@ while True:
             alarm_status = False
 
         if (distance > YAWN_THRESH):
-            cv2.putText(frame, "Estás Bostezando", (10, 30),
+            cv2.putText(frame, "Estas cansado ??", (10, 30),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
             if alarm_status2 == False and saying == False:
                 alarm_status2 = True
@@ -129,12 +129,12 @@ while True:
         else:
             alarm_status2 = False
 
-        cv2.putText(frame, "EAR: {:.2f}".format(ear), (300, 30),
+        cv2.putText(frame, "EAR: {:.2f}".format(ear), (300, 50),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
-        cv2.putText(frame, "YAWN: {:.2f}".format(distance), (300, 60),
+        cv2.putText(frame, "YAWN: {:.2f}".format(distance), (300, 80),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
 
-    cv2.imshow("Frame", frame)
+    cv2.imshow("Somnoliento App", frame)
     key = cv2.waitKey(1) & 0xFF
 
     if key == ord("q"):
